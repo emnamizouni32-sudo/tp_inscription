@@ -4,7 +4,7 @@ import '../models/user_profile.dart';
 import '../utils/validators.dart';
 import 'step_one_screen.dart';
 
-/// Maquette 03_Recapitulatif
+
 class SummaryScreen extends StatefulWidget {
   final UserProfile profil;
 
@@ -17,7 +17,7 @@ class SummaryScreen extends StatefulWidget {
 class _SummaryScreenState extends State<SummaryScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  /// Retour à l'écran 1 en vidant toute la pile de navigation.
+  
   void _goToStart() {
     Navigator.of(context).pushAndRemoveUntil(
       MaterialPageRoute(builder: (_) => const StepOneScreen()),
@@ -25,7 +25,7 @@ class _SummaryScreenState extends State<SummaryScreen> {
     );
   }
 
-  /// Réinitialisation : on demande confirmation avant de tout effacer.
+  
   Future<void> _confirmReset() async {
     final ok = await showDialog<bool>(
       context: context,
@@ -172,7 +172,7 @@ class _SummaryScreenState extends State<SummaryScreen> {
   }
 }
 
-/// Une ligne (icône, libellé, valeur) de la carte récapitulative.
+
 class _Row {
   final IconData icon;
   final String label;
@@ -181,7 +181,6 @@ class _Row {
   const _Row(this.icon, this.label, this.value);
 }
 
-/// Composant « Carte récapitulative » : titre de section + lignes.
 class _SectionCard extends StatelessWidget {
   final String title;
   final List<_Row> rows;

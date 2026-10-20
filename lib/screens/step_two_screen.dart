@@ -5,7 +5,7 @@ import '../models/user_profile.dart';
 import '../utils/validators.dart';
 import 'summary_screen.dart';
 
-/// Maquette 02_Etape2_ProfilPro
+
 class StepTwoScreen extends StatefulWidget {
   final UserProfile profil;
 
@@ -45,7 +45,7 @@ class _StepTwoScreenState extends State<StepTwoScreen> {
   void _next() {
     if (!_formKey.currentState!.validate()) return;
 
-    // Fusion des données : on ne modifie pas l'objet reçu, on en crée une copie.
+    
     final updated = widget.profil.copyWith(
       profession: _professionCtrl.text.trim(),
       experience: int.parse(_experienceCtrl.text.trim()),
@@ -63,7 +63,7 @@ class _StepTwoScreenState extends State<StepTwoScreen> {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Profil Professionnel – Étape 2/3'),
-        // Bouton retour explicite
+        
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           tooltip: 'Retour',

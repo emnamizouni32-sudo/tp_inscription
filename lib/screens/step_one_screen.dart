@@ -4,7 +4,7 @@ import '../models/user_profile.dart';
 import '../utils/validators.dart';
 import 'step_two_screen.dart';
 
-/// Maquette 01_Etape1_InfosPerso
+
 class StepOneScreen extends StatefulWidget {
   const StepOneScreen({super.key});
 
@@ -15,7 +15,7 @@ class StepOneScreen extends StatefulWidget {
 class _StepOneScreenState extends State<StepOneScreen> {
   final _formKey = GlobalKey<FormState>();
 
-  // Sert à revalider la confirmation quand le mot de passe change.
+
   final _confirmKey = GlobalKey<FormFieldState<String>>();
 
   final _nomCtrl = TextEditingController();
@@ -38,7 +38,7 @@ class _StepOneScreenState extends State<StepOneScreen> {
   }
 
   void _next() {
-    // On n'avance que si TOUS les champs sont valides.
+    
     if (!_formKey.currentState!.validate()) return;
 
     final profil = UserProfile(

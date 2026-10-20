@@ -3,16 +3,13 @@ import 'package:flutter/material.dart';
 import 'screens/step_one_screen.dart';
 
 void main() => runApp(const InscriptionApp());
-
-/// Mêmes couleurs que les styles locaux Figma (page « Composants »).
-/// Si tu changes une couleur dans Figma, change-la ici aussi.
 class AppColors {
   AppColors._();
 
-  static const Color primary = Color(0xFFE91E8C); // Color / Primary
-  static const Color error = Color(0xFFD32F2F); // Color / Error
-  static const Color surface = Color(0xFFFFFFFF); // Color / Surface
-  static const Color fieldBackground = Color(0xFFFDF2F8); // Color / Field background
+  static const Color primary = Color(0xFFE91E8C); 
+  static const Color error = Color(0xFFD32F2F); 
+  static const Color surface = Color(0xFFFFFFFF); 
+  static const Color fieldBackground = Color(0xFFFDF2F8); 
 }
 
 class InscriptionApp extends StatelessWidget {
@@ -20,7 +17,7 @@ class InscriptionApp extends StatelessWidget {
 
   static OutlineInputBorder _border(Color color, double width) {
     return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8), // rayon 8 comme dans Figma
+      borderRadius: BorderRadius.circular(8), 
       borderSide: BorderSide(color: color, width: width),
     );
   }
@@ -53,19 +50,19 @@ class InscriptionApp extends StatelessWidget {
             color: Colors.black87,
           ),
         ),
-        // Variantes Default / Focus / Error du composant « Champ de saisie »
+        
         inputDecorationTheme: InputDecorationTheme(
           filled: true,
           fillColor: AppColors.fieldBackground,
           border: _border(Colors.transparent, 1),
           enabledBorder: _border(Colors.transparent, 1),
-          focusedBorder: _border(AppColors.primary, 2), // Focus : 2 px Primary
+          focusedBorder: _border(AppColors.primary, 2), 
           errorBorder: _border(AppColors.error, 1),
           focusedErrorBorder: _border(AppColors.error, 2),
           errorStyle: const TextStyle(fontSize: 12, color: AppColors.error),
           helperStyle: const TextStyle(fontSize: 12),
         ),
-        // Bouton Primary : hauteur 48, rayon 24
+        
         filledButtonTheme: FilledButtonThemeData(
           style: FilledButton.styleFrom(
             minimumSize: const Size.fromHeight(48),
@@ -74,7 +71,7 @@ class InscriptionApp extends StatelessWidget {
             ),
           ),
         ),
-        // Bouton Secondary
+        
         outlinedButtonTheme: OutlinedButtonThemeData(
           style: OutlinedButton.styleFrom(
             minimumSize: const Size.fromHeight(48),

@@ -1,16 +1,15 @@
-/// Modèle immuable : tous les champs sont `final`.
-/// Pour "modifier" un profil, on crée une copie avec [copyWith].
+
 class UserProfile {
-  // Étape 1
+  
   final String nom;
   final String prenom;
   final String email;
   final String motDePasse;
 
-  // Étape 2
+  
   final String profession;
-  final int? experience; // années d'expérience (0 à 50)
-  final double? tjm; // taux journalier moyen en €
+  final int? experience;
+  final double? tjm; 
   final String biographie;
 
   const UserProfile({
@@ -24,8 +23,7 @@ class UserProfile {
     this.biographie = '',
   });
 
-  /// Retourne une NOUVELLE instance : seuls les champs fournis changent,
-  /// les autres gardent leur valeur actuelle.
+  
   UserProfile copyWith({
     String? nom,
     String? prenom,
@@ -48,6 +46,6 @@ class UserProfile {
     );
   }
 
-  /// Le mot de passe n'est jamais affiché en clair (écran récapitulatif).
+  
   String get motDePasseMasque => '•' * motDePasse.length;
 }

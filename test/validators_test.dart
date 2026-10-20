@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 
-// ⚠️ Remplace "tp_inscription" par le champ `name:` de ton pubspec.yaml
+
 import 'package:tp_inscription/models/user_profile.dart';
 import 'package:tp_inscription/utils/validators.dart';
 
